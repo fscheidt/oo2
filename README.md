@@ -1,4 +1,7 @@
-# Orientação a objetos II
+# Orientação a Objetos II
+
+<details>
+<summary>INFO DA DISCIPLINA</summary>
 
 - **[AVA](https://ava.ifpr.edu.br/course/view.php?id=13096)**
 - Curso: TADS
@@ -8,9 +11,40 @@
 - Período aulas: 12/03/25 à jul/25
 - **[Repositório](https://github.com/fscheidt/oo2)**
 
+</details>
+<br><br>
+
+# Aula 2
+
+## Ambiente virtual
+
+Instala um novo ambiente virtual (env) para o projeto:
+
+```bash
+cd projeto
+python3 -m venv env
+source env/bin/activate
+```
+
+Teste para verificar se esta sendo usado o python do venv:
+```bash
+which python3
+```
+
+*Alternativa: No caso do comando `python3 -m venv` falhar:*
+
+```bash
+cd projeto
+python3 -m pip install virtualenv
+python3 -m virtualenv env
+source env/bin/activate
+```
 
 
-## Aula 1 
+---
+
+
+# Aula 1 
 
 ## Configuração do vscode
 
