@@ -33,10 +33,11 @@ class PessoaFisica(Pessoa): # extends
     def calcular_ir(self):
         return self.renda * 0.2
 
-p1 = PessoaFisica("Maria", "mary@gmail.com", "100.000.000-99")
-p1.renda = 90_000
-print(f"IR a pagar {p1.nome} foi R$ {p1.calcular_ir()}")
+if __name__ == "__main__":
+    p1 = PessoaFisica("Maria", "mary@gmail.com", "100.000.000-99")
+    p1.renda = 90_000
+    print(f"IR a pagar {p1.nome} foi R$ {p1.calcular_ir()}")
 
-p1 = PessoaJuridica("MUFFATO", "mmm@gmail.com", "0001/111.000-22")
-p1.renda = 25_200_000
-print(f"IR a pagar {p1.nome} foi R$ {p1.calcular_ir()}")
+    p1 = PessoaJuridica("MUFFATO", "mmm@gmail.com", "0001/111.000-22")
+    p1.renda = 25_200_000
+    print(f"IR a pagar {p1.nome} foi R$ {p1.calcular_ir()}")

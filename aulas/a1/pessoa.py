@@ -8,15 +8,16 @@ class Pessoa:
             \n    CPF: {self.cpf}\
             """)
 
-p1 = Pessoa("Maria")
-p1.cpf = "838380000"
-# print(p1.nome)
-print(id(p1))    # imprimi o "identificador" do objeto
-p1.exibe_dados()
+if __name__ == "__main__":
+    p1 = Pessoa("Maria")
+    p1.cpf = "838380000"
+    # print(p1.nome)
+    print(id(p1))    # imprimi o "identificador" do objeto
+    p1.exibe_dados()
 
-p2 = Pessoa("Joao")
-p2.cpf = "138380000"
-print(id(p2))  # imprimi o "identificador" do objeto
-# print(p1.nome)
-p2.exibe_dados()
+    p2 = Pessoa("Joao")
+    p2.cpf = "138380000"
+    print(id(p2))  # imprimi o "identificador" do objeto
+    # print(p1.nome)
+    p2.exibe_dados()
 

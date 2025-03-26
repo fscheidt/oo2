@@ -65,6 +65,12 @@ python3 -m venv env
 source env/bin/activate
 ```
 
+### instala a biblioteca rich
+
+```bash
+pip install rich
+```
+
 Teste para verificar se esta sendo usado o python do venv:
 ```bash
 which python3
