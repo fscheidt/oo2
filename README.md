@@ -14,7 +14,46 @@
 </details>
 <br><br>
 
+# Aula 3 
+
+## (1) Organização do projeto em módulos
+
+- cada módulo deve conter o arquivo `__init__.py`
+- criar arquivo main.py e testar importar Pessoa (aula 2)
+- alterar pessoa.py e adicionar `__name__`
+
+## (2) Modelagem transferência pix
+
+- na pasta `aulas/a3` criar o arquivo `conta.py`
+
+```python
+
+class Transacao:
+    """ Atributos: op, tipo, data, valor, origem, destino, status """
+    pass
+
+class Conta: 
+    """ Atributos: saldo, limite, pix, nome, transacoes """
+    def transferir(self):
+        """ realiza transferência pix """
+        pass
+
+    def consulta(self):
+        """ consulta saldo da conta """
+        pass
+
+# Testar:
+# maria = Conta(saldo=20_000, pix="maria@pessoa.br", limite=2000)
+# jose = Conta(saldo=-6000, pix="jose@pessoa.br")
+
+```
+
+
+---
+
 # Aula 2
+- Criar ambiente virtual python para o projeto
+- Classe Pessoa, PessoaFisica e PessoaJuridia
 
 ## Ambiente virtual
 
