@@ -43,8 +43,13 @@ class Conta:
         pass
 
 # Testar:
-# maria = Conta(saldo=20_000, pix="maria@pessoa.br", limite=2000)
-# jose = Conta(saldo=-6000, pix="jose@pessoa.br")
+maria = Conta(saldo=20_000, pix="maria@pessoa.br", limite=2000)
+jose = Conta(saldo=-6000, pix="jose@pessoa.br")
+
+maria.tranferir(jose, 8_000)
+
+jose.consulta()  # 2000 
+maria.consulta() # 12_000
 
 ```
 
