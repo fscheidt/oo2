@@ -14,6 +14,25 @@
 </details>
 <br><br>
 
+# Aula 4
+
+- getters e setters
+- método estático
+- exceção
+- implementação:
+    - transação: construtor, credito, debito
+    - extrato da conta
+
+## classe Transação
+
+```python
+def credito(valor: float, origem: "Conta", destino: "Conta") -> "Transacao":
+    t = Transacao("C", valor, origem, destino)
+    t.date = datetime.now()
+    return t
+```
+
+
 # Aula 3 
 
 ## (1) Organização do projeto em módulos
