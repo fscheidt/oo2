@@ -98,6 +98,10 @@ class Conta:
         cl = "red" if self.saldo < 0 else "blue" # GETTER
         print(f"Saldo atual é R$ [{cl}]{self.saldo}[/] (conta {self.pix})")
 
+    def extrato(self):
+        # fazer for na lista de transacoes, print em cada t
+        pass
+
 if __name__ == "__main__":
     maria = Conta(saldo=20_000, pix="maria@pessoa.br", limite=2000)
     jose = Conta(saldo=2000, pix="jose@pessoa.br")
@@ -109,6 +113,8 @@ if __name__ == "__main__":
     jose.consulta() 
 
     maria.transferir(jose, 8_000) 
+    jose.extrato()
+    # 02/04/25 21:40  C   R$8_000   from=maria@pessoa.br
 
     maria.consulta() 
     jose.consulta() 
