@@ -14,6 +14,31 @@
 </details>
 <br><br>
 
+# Aula 5
+
+## Framework Nicegui 
+Interface gráfica no python
+
+Ativar o ambiente virtual e instalar o nicegui:
+
+```python
+pip install nicegui
+```
+
+## Atividades
+
+### 1) Pessoa Fisica e Juridica
+Implementar o calculo do IR usando interface gráfica do NiceGui. Colocar código do python no arquivo:
+> nice/pessoa_front.py
+
+Componentes:
+- ui.label (texto)
+- ui.input 
+- ui.button
+
+
+
+
 # Aula 4
 
 - getters e setters
