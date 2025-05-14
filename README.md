@@ -37,6 +37,17 @@ Componentes:
 - ui.button
 
 
+# Aula 6 - Tipo enumerado
+
+```python
+from enum import Enum
+class ImageType(Enum):
+    PNG = "png"
+    JPG = "jpg"
+```
+
+
+
 
 
 # Aula 4
