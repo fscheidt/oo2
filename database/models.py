@@ -13,3 +13,4 @@ class Filme(Base):
     titulo = Column(String, nullable=False)
     ano = Column(Integer, nullable=False)
     is_active = Column(Boolean, default=True)
+    # diretor = ForeignKey

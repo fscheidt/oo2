@@ -17,6 +17,11 @@
 
 # Aula 10 - ORM
 
+## Arquivos
+database/
+- crud.py
+- models.py
+- main.py
 
 ## Instalar dependências do sqlite (CRUD)
 
@@ -30,6 +35,11 @@ pip install sqlalchemy
 
 ## SQLALCHEMY
 - Faz mapeamento da classe python para a tabela do banco de dados
+
+## SQLite
+- Banco de dados, vem instalado nativo no python
+
+> SQLite Viewer (extensão vscode)
 
 
 
