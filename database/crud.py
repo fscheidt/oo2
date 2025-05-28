@@ -23,7 +23,7 @@ def init_db():
 
 def get_filme(db: Session, filme_id: int):
     # SELECT * FROM filmes WHERE id = 'filme_id'
-    result = db.query(Filme).filter(Filme.id == filme_id).all()
+    result = db.query(Filme).filter(Filme.id == filme_id).one()
     return result
 
 def get_filmes(db: Session):
@@ -34,9 +34,9 @@ def add_filme(db: Session, filme: Filme):
     db.add(filme)  # insere na tabela
     db.commit()    # confirma a transação 
 
-def add_filme(db: Session, filme: Filme):
+def update_filme(db: Session, filme: Filme):
     # UPDATE
-    db.add(filme)  # insere na tabela
+    db.add(filme)  # faz update
     db.commit()    # confirma a transação 
 
 def delete_filme(db: Session, filme_id: int):

@@ -26,8 +26,20 @@ if __name__ == "__main__":
     from rich import print
     # Initialize Database
     init_db()
+    # CREATE
     # test_create_movie() # teste de inserção de um filme
-    test_delete_movie(1)
+
+    # DELETE
+    # test_delete_movie(1)
+
+    # UPDATE
+    # obtem a instancia do filme armazenado no banco
+    db = SessionLocal() # db == database == banco de dados
+    filme = crud.get_filme(db, filme_id=2)
+    filme.titulo = "Avatar updated"
+    crud.update_filme(db, filme)
+
+    # READ
     results = test_list_movies() # select all
 
     print(results)
