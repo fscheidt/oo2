@@ -63,7 +63,6 @@ class Conta:
     @property
     def saldo(self) -> float: # MÉTODO GETTER
         return self._saldo
-    
     @saldo.setter    # METODO SETTER
     def saldo(self, valor: float):
         # EXEMPLO DE VALIDACAO (descomentar para testar)

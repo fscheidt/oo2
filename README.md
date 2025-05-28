@@ -14,6 +14,31 @@
 </details>
 <br><br>
 
+
+# Aula 10
+
+
+## Instalar dependências do sqlite (CRUD)
+```
+pip install -r requirements.txt
+```
+
+
+
+
+# Aula 6 - Tipo enumerado
+
+```python
+from enum import Enum
+class ImageType(Enum):
+    PNG = "png"
+    JPG = "jpg"
+```
+
+
+
+
+
 # Aula 5
 
 ## Framework Nicegui 
@@ -35,17 +60,6 @@ Componentes:
 - ui.label (texto)
 - ui.input 
 - ui.button
-
-
-# Aula 6 - Tipo enumerado
-
-```python
-from enum import Enum
-class ImageType(Enum):
-    PNG = "png"
-    JPG = "jpg"
-```
-
 
 
 
