@@ -22,15 +22,24 @@ def init_db():
 # ============================================
 
 def get_filme(db: Session, filme_id: int):
-    return db.query(Filme).filter(Filme.id == filme_id).all()
+    # SELECT * FROM filmes WHERE id = 'filme_id'
+    result = db.query(Filme).filter(Filme.id == filme_id).all()
+    return result
 
 def get_filmes(db: Session):
     return db.query(Filme).filter().all()
+ 
+def add_filme(db: Session, filme: Filme):
+    # INSERT INTO filmes ...
+    db.add(filme)  # insere na tabela
+    db.commit()    # confirma a transação 
 
 def add_filme(db: Session, filme: Filme):
-    db.add(filme)
-    db.commit()
+    # UPDATE
+    db.add(filme)  # insere na tabela
+    db.commit()    # confirma a transação 
 
 def delete_filme(db: Session, filme_id: int):
+    # DELETE ...
     db.query(Filme).filter(Filme.id == filme_id).delete()
     db.commit()

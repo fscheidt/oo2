@@ -1,7 +1,7 @@
 nicegui
 fastapi
 sqlalchemy
-psycopg2
+# psycopg2
 bcrypt
 python-dotenv
 alembic

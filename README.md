@@ -15,14 +15,21 @@
 <br><br>
 
 
-# Aula 10
+# Aula 10 - ORM
 
 
 ## Instalar dependências do sqlite (CRUD)
-```
+
+```bash
 pip install -r requirements.txt
 ```
+OU 
+```bash
+pip install sqlalchemy
+```
 
+## SQLALCHEMY
+- Faz mapeamento da classe python para a tabela do banco de dados
 
 
 

@@ -18,19 +18,16 @@ def test_list_movies():
     db = SessionLocal()
     return [(f.id, f.titulo, f.ano) for f in crud.get_filmes(db)]
      
-def test_delete_movie():
+def test_delete_movie(filme_id: int):
     db = SessionLocal()
-    crud.delete_filme(db, 1)
+    crud.delete_filme(db, filme_id)
 
 if __name__ == "__main__":
-    
     from rich import print
     # Initialize Database
     init_db()
-    
-    # test_create_movie()
-    
-    test_delete_movie()
-    
-    results = test_list_movies()
+    # test_create_movie() # teste de inserção de um filme
+    test_delete_movie(1)
+    results = test_list_movies() # select all
+
     print(results)
