@@ -1,4 +1,4 @@
-from models import Base, Filme
+from models import Filme, Base, FilmeBase
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -23,23 +23,23 @@ def init_db():
 
 def get_filme(db: Session, filme_id: int):
     # SELECT * FROM filmes WHERE id = 'filme_id'
-    result = db.query(Filme).filter(Filme.id == filme_id).one()
+    result = db.query(FilmeBase).filter(FilmeBase.id == filme_id).one()
     return result
 
 def get_filmes(db: Session):
-    return db.query(Filme).filter().all()
+    return db.query(FilmeBase).filter().all()
  
 def add_filme(db: Session, filme: Filme):
     # INSERT INTO filmes ...
-    db.add(filme)  # insere na tabela
+    db.add(FilmeBase(**filme.__dict__))  # insere na tabela
     db.commit()    # confirma a transação 
 
 def update_filme(db: Session, filme: Filme):
     # UPDATE
-    db.add(filme)  # faz update
+    db.add(FilmeBase(**filme.__dict__))  # faz update
     db.commit()    # confirma a transação 
 
 def delete_filme(db: Session, filme_id: int):
     # DELETE ...
-    db.query(Filme).filter(Filme.id == filme_id).delete()
+    db.query(FilmeBase).filter(FilmeBase.id == filme_id).delete()
     db.commit()

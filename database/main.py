@@ -10,7 +10,9 @@ def test_create_movie():
     db = SessionLocal()
     filme = Filme(
         titulo="Avatar",
-        ano=2009
+        ano=2009,
+        diretor="Matheus",
+        pais_origem="USA",
     )
     crud.add_filme(db, filme)
     
@@ -27,7 +29,7 @@ if __name__ == "__main__":
     # Initialize Database
     init_db()
     # CREATE
-    # test_create_movie() # teste de inserção de um filme
+    test_create_movie() # teste de inserção de um filme
 
     # DELETE
     # test_delete_movie(1)
@@ -35,9 +37,9 @@ if __name__ == "__main__":
     # UPDATE
     # obtem a instancia do filme armazenado no banco
     db = SessionLocal() # db == database == banco de dados
-    filme = crud.get_filme(db, filme_id=2)
-    filme.titulo = "Avatar updated"
-    crud.update_filme(db, filme)
+    # filme = crud.get_filme(db, filme_id=2)
+    # filme.titulo = "Avatar updated"
+    # crud.update_filme(db, filme)
 
     # READ
     results = test_list_movies() # select all
